@@ -1,0 +1,11 @@
+для удаления созданного докера и всей петрухи
+
+docker stop $(NAME)
+docker rm $(NAME)
+docker rmi $(NAME):$(VERSION)
+sudo docker rmi 1b
+
+для создания контейнера и всей петрухи
+
+docker build -t $(NAME) .
+docker run -p 80:80 -p 443:443 -it $(NAME)
